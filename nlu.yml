@@ -1,0 +1,7 @@
+version: "3.1"
+nlu:
+- intent: inquire_admission_fees
+  examples: |
+    - كم رسوم القبول؟
+    - رسوم القبول للنوع [عام](admission_type)
+    - رسوم القبول للنوع [خاص](admission_type)

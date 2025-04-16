@@ -1,0 +1,25 @@
+version: '3.1'
+intents:
+  - inquire_admission_fees
+entities:
+  - admission_type
+responses:
+  utter_admission_fees:
+    - condition:
+        - type: slot
+          name: admission_type
+          value: خاص
+      text: "رسوم القبول للنظام الخاص هي 250,000 جنيه."
+    - condition:
+        - type: slot
+          name: admission_type
+          value: عام
+      text: "رسوم القبول للنظام العام هي 100,000 جنيه."
+    - text: "هل تقصد القبول العام أم الخاص؟"
+slots:
+  admission_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: admission_type
