@@ -1,0 +1,6 @@
+version: "3.1"
+rules:
+- rule: respond to admission fees inquiry
+  steps:
+  - intent: inquire_admission_fees
+  - action: utter_admission_fees
